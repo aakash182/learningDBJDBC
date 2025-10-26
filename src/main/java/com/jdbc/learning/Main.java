@@ -26,7 +26,7 @@ public class Main {
 //		Employe e2 = new Employe("YASH" ,"male",6,39308);
 //		edao.updateEmploye(e2);
 		
-//		edao.deleteEmploye(5);
+//		edao.deleteEmploye(5); // delete employee at id no 6
 		
 		edao.printALLEmploye();
 		//		 DriverManager.getConnection("jdbc:mysql://localhost:3306/learningDB","root","123@Vpark").createStatement().executeUpdate("insert into student values(06,'Ajay','Male',45000)");
