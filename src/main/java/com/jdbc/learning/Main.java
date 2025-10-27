@@ -28,6 +28,8 @@ public class Main {
 		
 //		edao.deleteEmploye(5); // delete employee at id no 6
 		
+		edao.insertBatch();
+		
 		edao.printALLEmploye();
 		//		 DriverManager.getConnection("jdbc:mysql://localhost:3306/learningDB","root","123@Vpark").createStatement().executeUpdate("insert into student values(06,'Ajay','Male',45000)");
 		 

@@ -10,12 +10,17 @@ public interface EmployeDao {
 	
 	public void saveEmploye(Employe e) throws SQLException;
 	
-	public void updateEmploye(Employe e) throws SQLException;;
+	public void updateEmploye(Employe e) throws SQLException;
 	
-	public void deleteEmploye(int id) throws SQLException;;
+	public void deleteEmploye(int id) throws SQLException;
 	
-	public void getEmploye(int id) throws SQLException;;
+	public void getEmploye(int id) throws SQLException;
 	
-	public void printALLEmploye() throws SQLException;;
+	public void printALLEmploye() throws SQLException;
+
+	public void saveEmpByPs(Employe e);
+	
+	public void insertBatch() throws SQLException;
 
 }
+
