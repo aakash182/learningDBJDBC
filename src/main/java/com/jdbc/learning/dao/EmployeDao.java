@@ -1,6 +1,7 @@
 package com.jdbc.learning.dao;
 
 import java.sql.SQLException;
+import com.jdbc.learning.entity.Employe;
 
 import com.jdbc.learning.entity.Employe;
 
@@ -18,8 +19,6 @@ public interface EmployeDao {
 	
 	public void printALLEmploye() throws SQLException;
 
-	public void saveEmpByPs(Employe e);
-	
 	public void insertBatch() throws SQLException;
 
 }

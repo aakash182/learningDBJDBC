@@ -6,13 +6,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
 import com.jdbc.learning.entity.Employe;
 import com.mysql.cj.protocol.Resultset;
 
 public class EmployeDaoImpl implements EmployeDao {
-	private static final String INSERT_QUERY_BY_PS = "INSERT INTO EMPLOYEE VALUES (?,?,?,?)";
-	static String INSERT_QUERY = "insert into student values(%d,'%s','%s',%d)";
+	
+	private static  String INSERT_QUERY_BY_PS = "INSERT INTO student VALUES (?,?,?,?)";
+//	static String INSERT_QUERY = "insert into student values(%d,'%s','%s',%d)";
 	
 	private static Connection connection;
 
@@ -68,24 +68,6 @@ public class EmployeDaoImpl implements EmployeDao {
 			System.out.println("select * from student");
 	}
 	@Override
-	public void saveEmpByPs(Employe e){
-	
-		try (PreparedStatement ps = connection.prepareStatement(INSERT_QUERY_BY_PS)) {
-
-			ps.setInt(1, e.getId());
-			ps.setString(2, e.getName());
-			ps.setString(3, e.getGender());
-			ps.setInt(4, e.getSalary());
-			ps.executeUpdate();
-
-		} catch (SQLException e1) {
-			e1.printStackTrace();
-		}
-		System.out.println("EmployeeDaoImpl.saveEmpByPs()");
-	}
-
-
-	@Override
 	public void insertBatch() throws SQLException {
 		connection.setAutoCommit(false);
 		PreparedStatement ps = connection.prepareStatement(INSERT_QUERY_BY_PS);
@@ -93,7 +75,7 @@ public class EmployeDaoImpl implements EmployeDao {
 		
 		for(int i=1;i<=100;i++) {
 			 
-				ps.setInt(1, 11+i);
+				ps.setInt(1, 13+i);
 				ps.setString(2, "ARJUN" +i);
 				ps.setString(3, "M");
 				ps.setInt(4, 60_000);
